@@ -5,29 +5,28 @@
  */
 Ext.onReady(function(){
     //Ext.Msg.alert("타이틀","HelloWorld2");
+    // fit 가득참
+    // border
+    // center 가운데
+    // absolute 자식 위치 절대적
+    // acordian -> 클릭 시 보여줌
+    // card -> 메뉴바 처럼 클릭하며 화면 보여주는 거.ㅎㅎ
+
     Ext.create("Ext.container.Viewport",{
         layout : 'fit',
         border : true,
         items : [{
             xtype : 'panel',
             title : '부모패널',
-            layout: 'absolute',
+            layout: 'card',
             items : [{
                 xtype : 'panel',
-                width : 300,
-                height : 300,
-                x : 100,
-                y : 200,
-                border: true,
                 title : '첫째 패널',
+                html : '첫째입니다'
             }, {
                 xtype : 'panel',
-                x : 150,
-                y : 300,
-                width : 300,
-                height : 300,
-                border: true,
                 title : '둘째 패널',
+                html : '둘째입니다.'
             }]
         }]
     })
