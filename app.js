@@ -6,44 +6,29 @@
 Ext.onReady(function(){
     //Ext.Msg.alert("타이틀","HelloWorld2");
     Ext.create("Ext.container.Viewport",{
-        renderTo : Ext.getBody(),
-        // 이 컴포넌트를 어디에 넣을 것인가..
-        layout : 'border',
+        layout : 'fit',
         border : true,
-        items : [
-            {
-                xtype : "panel",
-                flex : 1,
-                region : 'north',
-                title : "패널1",
-                layout : "border",
-            },
-            {
-                xtype : "panel",
-                flex: 1,
-                region : 'center',
-                title : "패널2",
-            },
-            {
-                xtype : "panel",
-                flex: 1,
-                region : 'east',
-                title : "패널 east",
-            },
-            {
-                xtype : "panel",
-                flex: 1,
-                region : 'west',
-                title : "패널 west",
-            },
-            {
-                xtype : "panel",
-                flex: 1,
-                region : 'south',
-                title : "패널 south",
-            }
-
-            // north, center, south, east, west
-        ]
+        items : [{
+            xtype : 'panel',
+            title : '부모패널',
+            layout: 'absolute',
+            items : [{
+                xtype : 'panel',
+                width : 300,
+                height : 300,
+                x : 100,
+                y : 200,
+                border: true,
+                title : '첫째 패널',
+            }, {
+                xtype : 'panel',
+                x : 150,
+                y : 300,
+                width : 300,
+                height : 300,
+                border: true,
+                title : '둘째 패널',
+            }]
+        }]
     })
 })
